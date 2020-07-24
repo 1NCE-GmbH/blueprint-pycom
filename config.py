@@ -25,5 +25,5 @@ ROOT_CA_PATH = '/flash/root-CA.crt'
 """"
     UDP Endpoint configuration
 """
-UDP_ENDPOINT_IP = "udp.connectivity-suite.cloud"
+UDP_ENDPOINT_ADDRESS = "udp.connectivity-suite.cloud"
 UDP_ENDPOINT_PORT = 4445

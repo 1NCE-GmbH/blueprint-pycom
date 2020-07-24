@@ -12,10 +12,11 @@ if __name__ == '__main__':
 
     logger.info("Opening UDP Socket")
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    addr = (config.UDP_ENDPOINT_IP, config.UDP_ENDPOINT_PORT)
+    addr = socket.getaddrinfo(config.UDP_ENDPOINT_ADDRESS, config.UDP_ENDPOINT_PORT)[0][-1]
+    logger.info("Resolved Address [{}]".format(addr))
     logger.info(
         "Sending UDP message to {}:{} with body {}".format(
-            config.UDP_ENDPOINT_IP,
+            config.UDP_ENDPOINT_ADDRESS,
             config.UDP_ENDPOINT_PORT,
             message))
     s.sendto(message, addr)
