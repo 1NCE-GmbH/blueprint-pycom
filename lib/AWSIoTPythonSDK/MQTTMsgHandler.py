@@ -234,7 +234,7 @@ class MsgHandler:
                 self._send_pingreq()
                 self._waiting_ping_resp = True
             elif self._connection_state == mqttConst.STATE_DISCONNECTED:
-                self.connect()
+                self.createSocketConnection()
 
             self._start_time = time.time()
         elif self._waiting_ping_resp and (
@@ -243,7 +243,7 @@ class MsgHandler:
                 if self._ping_failures <= self._ping_cutoff:
                     self._ping_failures += 1
                 else:
-                    self.connect()
+                    self.createSocketConnection()
             else:
                 self._ping_failures = 0
 
@@ -256,7 +256,6 @@ class MsgHandler:
         self._start_time = time.time()
         self._ping_failures = 0
         while True:
-
             self._verify_connection_state()
 
             self._out_packet_mutex.acquire()
