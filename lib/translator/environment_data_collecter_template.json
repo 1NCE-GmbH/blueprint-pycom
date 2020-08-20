@@ -1,0 +1,48 @@
+{
+  "sense": [
+    {
+      "asset": "data_type",
+      "value": "Environment Data Collector"
+    },
+    {
+      "asset": "temperature",
+      "value": {
+        "byte": 0,
+        "bytelength": 4,
+        "type": "float"
+      }
+    },
+    {
+      "asset": "humidity",
+      "value": {
+        "byte": 4,
+        "bytelength": 4,
+        "type": "float"
+      }
+    },
+    {
+      "asset": "brightness",
+      "value": {
+        "byte": 8,
+        "bytelength": 4,
+        "type": "float"
+      }
+    },
+    {
+      "asset": "battery_charge",
+      "value": {
+        "byte": 12,
+        "bytelength": 4,
+        "type": "float"
+      }
+    },
+    {
+      "asset": "maintenance_needed",
+      "value": {
+        "byte": 16,
+        "bytelength": 1,
+        "type": "boolean"
+      }
+    }
+  ]
+}

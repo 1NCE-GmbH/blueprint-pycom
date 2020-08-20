@@ -1,0 +1,145 @@
+{
+    "sense": [
+        {
+            "asset": "type",
+            "value": {
+                "byte": 0,
+                "bytelength": 1,
+                "type": "string"
+            }
+        },
+        {
+            "switch": {
+                "byte": 0,
+                "bytelength": 1,
+                "type": "string"
+            },
+            "on": [
+                {
+                    "case": "T",
+                    "comment": "Track of movement",
+                    "do": [
+                        {
+                            "asset": "data_type",
+                            "value": "Movement tracking"
+                        },
+                        {
+                            "asset": "date_time",
+                            "value": {
+                                "byte": 1,
+                                "bytelength": 19,
+                                "type": "string"
+                            }
+                        },
+                        {
+                            "asset": "gps.latitude",
+                            "value": {
+                                "byte": 20,
+                                "bytelength": 8,
+                                "type": "float"
+                            }
+                        },
+                        {
+                            "asset": "gps.longitude",
+                            "value": {
+                                "byte": 28,
+                                "bytelength": 8,
+                                "type": "float"
+                            }
+                        },
+                        {
+                            "asset": "gps.accuracy",
+                            "value": {
+                                "byte": 36,
+                                "bytelength": 2,
+                                "type": "int"
+                            }
+                        },
+                        {
+                            "asset": "gps.altitude",
+                            "value": {
+                                "byte": 38,
+                                "bytelength": 4,
+                                "type": "float"
+                            }
+                        },
+                        {
+                            "asset": "gps.geoid_height",
+                            "value": {
+                                "byte": 42,
+                                "bytelength": 4,
+                                "type": "float"
+                            }
+                        },
+                        {
+                            "asset": "gps.speed",
+                            "value": {
+                                "byte": 46,
+                                "bytelength": 4,
+                                "type": "float"
+                            }
+                        },
+                        {
+                            "asset": "gps.bearing",
+                            "value": {
+                                "byte": 50,
+                                "bytelength": 2,
+                                "type": "int"
+                            }
+                        },
+                        {
+                            "asset": "gps.sat_used",
+                            "value": {
+                                "byte": 52,
+                                "bytelength": 2,
+                                "type": "int"
+                            }
+                        },
+                        {
+                            "asset": "gps.sat_inview",
+                            "value": {
+                                "byte": 54,
+                                "bytelength": 2,
+                                "type": "int"
+                            }
+                        },
+                        {
+                            "asset": "name",
+                            "value": {
+                                "byte": 56,
+                                "bytelength": 15,
+                                "type": "string"
+                            }
+                        },
+                        {
+                            "asset": "desc",
+                            "value": {
+                                "byte": 71,
+                                "bytelength": 27,
+                                "type": "string"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "case": "S",
+                    "comment": "Name & Description",
+                    "do": [
+                        {
+                            "asset": "data_type",
+                            "value": "Name & Description"
+                        },
+                        {
+                            "asset": "name",
+                            "value": {
+                                "byte": 1,
+                                "bytelength": 36,
+                                "type": "string"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

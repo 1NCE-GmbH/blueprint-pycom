@@ -27,3 +27,9 @@ ROOT_CA_PATH = '/flash/root-CA.crt'
 """
 UDP_ENDPOINT_ADDRESS = "udp.connectivity-suite.cloud"
 UDP_ENDPOINT_PORT = 4445
+
+""""
+    Translation Location
+"""
+GPS_TRANSLATION_DATA_PATH = '/flash/lib/translator/gps_data.txt'
+ENV_DATA_COLLECTOR_TRANSLATION_DATA_PATH = '/flash/lib/translator/env_data_coll_data.txt'
