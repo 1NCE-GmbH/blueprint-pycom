@@ -3,8 +3,11 @@ import usocket as socket
 import utime as time
 
 import config
+import machine
+
 from lib import logging
 from lib.translator.message_service import fill_bytes, ValueType
+from nce.network.network_connector import NetworkConnector
 
 logging.basic_config(level=logging.INFO)
 logger = logging.get_logger("__main__")
@@ -52,5 +55,9 @@ if __name__ == '__main__':
                     message))
             s.sendto(message, addr)
             logger.info("Sent UDP Message to the UDP Broker")
-            time.sleep(60)
+            time.sleep(config.MESSAGE_INTERVAL_SECONDS)
+
+    logger.info("Closing the network connection")
+    NetworkConnector().disconnect()
+    machine.idle()
 

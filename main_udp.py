@@ -2,7 +2,10 @@
 import usocket as socket
 
 import config
+import machine
+
 from lib import logging
+from nce.network.network_connector import NetworkConnector
 
 logging.basic_config(level=logging.INFO)
 logger = logging.get_logger("__main__")
@@ -21,3 +24,7 @@ if __name__ == '__main__':
             message))
     s.sendto(message, addr)
     logger.info("Sent UDP Message to the UDP Broker")
+
+    logger.info("Closing the network connection")
+    NetworkConnector().disconnect()
+    machine.idle()

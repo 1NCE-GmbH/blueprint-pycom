@@ -2,9 +2,11 @@
 from nce.onboarding.onboard_service import OnBoardService
 from nce.onboarding.onboard_status import OnBoardStatus
 from nce.aws_iot.aws_iot_controller import AwsIotController
+from nce.network.network_connector import NetworkConnector
 
 from lib import logging
 import config
+import machine
 
 logging.basic_config(level=logging.INFO)
 logger = logging.get_logger("__main__")
@@ -26,6 +28,17 @@ if __name__ == '__main__':
                                       conn_disconnect_timeout=config.CONN_DISCONNECTION_TIMEOUT,
                                       mqtt_oper_timeout=config.MQTT_OPERATION_TIMEOUT)
         controller.initialize()
-        controller.publish(message='hello-world', topic='hello-world')
+        logger.info("Subscribing to topic [{}]".format(config.TOPIC_NAME))
+        controller.subscribe(config.TOPIC_NAME)
+        logger.info("Publishing message to topic [{}]".format(config.TOPIC_NAME))
+        controller.publish(message='hello-world', topic=config.TOPIC_NAME)
+        logger.info("Unsubscribing from topic [{}]".format(config.TOPIC_NAME))
+        controller.unsubscribe(config.TOPIC_NAME)
+        logger.info("Closing the MQTT connection")
+        controller.disconnect()
     else:
         logger.warning("On boarding failed with error: {}.".format(response.error))
+
+    logger.info("Closing the network connection")
+    NetworkConnector().disconnect()
+    machine.idle()
