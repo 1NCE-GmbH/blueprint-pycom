@@ -255,7 +255,7 @@ class MsgHandler:
 
         self._start_time = time.time()
         self._ping_failures = 0
-        while True:
+        while True and self._sock is not None:
             self._verify_connection_state()
 
             self._out_packet_mutex.acquire()
