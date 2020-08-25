@@ -47,6 +47,17 @@ class AwsIotController:
             callback=self._on_message_received)
         self.logger.info("Subscribed to topic {}".format(topic))
 
+    def unsubscribe(self, topic):
+        """
+            Unsubscribe from a topic
+
+        :param topic: Topic name
+        """
+        topic = "{0}/{1}".format(self.client_id, topic)
+        self.logger.info("Unsubscribing from topic '{}'...".format(topic))
+        self.client.unsubscribe(topic=topic)
+        self.logger.info("Unsubscribed from topic {}".format(topic))
+
     def publish(self, message, topic):
         """
             Publish a message to a topic
@@ -65,8 +76,7 @@ class AwsIotController:
         """
             Disconnect the MQTT connection
         """
-        self.client.disconnect()
-        self.logger.warning("Disconnected!")
+        return self.client.disconnect()
 
     def _on_message_received(self, client, userdata, message):
         """
