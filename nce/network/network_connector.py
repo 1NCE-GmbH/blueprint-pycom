@@ -13,7 +13,7 @@ class NetworkConnector:
 
     def _attach(self):
         """
-            Attaches to the 1nce LTE network
+            Attaches to the 1nce network
         """
         self.lte.attach()
         while not self.lte.isattached():
@@ -23,7 +23,7 @@ class NetworkConnector:
 
     def connect(self):
         """
-            Connects to the 1nce LTE network
+            Connects to the 1nce network
         """
         self._attach()
         self.lte.connect()
