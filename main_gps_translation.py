@@ -6,7 +6,7 @@ import config
 import machine
 
 from lib import logging
-from lib.translator.message_service import fill_bytes, ValueType
+from nce.translator.message_service import fill_bytes, ValueType
 from nce.network.network_connector import NetworkConnector
 
 logging.basic_config(level=logging.INFO)

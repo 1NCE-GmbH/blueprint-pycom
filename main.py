@@ -28,12 +28,12 @@ if __name__ == '__main__':
                                       conn_disconnect_timeout=config.CONN_DISCONNECTION_TIMEOUT,
                                       mqtt_oper_timeout=config.MQTT_OPERATION_TIMEOUT)
         controller.initialize()
-        logger.info("Subscribing to topic [{}]".format(config.TOPIC_NAME))
-        controller.subscribe(config.TOPIC_NAME)
-        logger.info("Publishing message to topic [{}]".format(config.TOPIC_NAME))
-        controller.publish(message='hello-world', topic=config.TOPIC_NAME)
-        logger.info("Unsubscribing from topic [{}]".format(config.TOPIC_NAME))
-        controller.unsubscribe(config.TOPIC_NAME)
+        logger.info("Subscribing to topic [{}]".format(config.MQTT_TOPIC_NAME))
+        controller.subscribe(config.MQTT_TOPIC_NAME)
+        logger.info("Publishing message to topic [{}]".format(config.MQTT_TOPIC_NAME))
+        controller.publish(message='hello-world', topic=config.MQTT_TOPIC_NAME)
+        logger.info("Unsubscribing from topic [{}]".format(config.MQTT_TOPIC_NAME))
+        controller.unsubscribe(config.MQTT_TOPIC_NAME)
         logger.info("Closing the MQTT connection")
         controller.disconnect()
     else:

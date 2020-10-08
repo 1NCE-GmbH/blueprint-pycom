@@ -3,6 +3,7 @@ from network import LTE
 
 from lib import logging
 import time
+import re
 
 
 class NetworkConnector:
@@ -35,10 +36,34 @@ class NetworkConnector:
         self.lte.disconnect()
         self.logger.info("Sim disconnected from iot.1nce.net")
 
+    def _send_at_command(self, command):
+        """
+            Sends AT command over the modem
+
+        :rtype: Response string
+        """
+        self.lte.pppsuspend()
+        resp = self.lte.send_at_cmd(command)
+        self.lte.pppresume()
+        return resp
+
     def get_reception(self):
         """
             Gets the current reception to the 1nce network
 
         :return: Number Reception to the 1nce network
         """
-        return self.lte.send_at_cmd("AT+CSQ")
+        return self._send_at_command("AT+CSQ")
+
+    def get_ip_address(self):
+        """"
+            Gets the Device it's Local IP address
+
+        :return IP Address
+        """
+        resp = self._send_at_command("AT+CGPADDR=1")
+        self.logger.info(resp)
+        search = re.search(r"\"([1-2]?\d?\d\.[1-2]?\d?\d\.[1-2]?\d?\d\.[1-2]?\d?\d)\"", resp)
+        if search:
+            return search.group(1)
+        return None

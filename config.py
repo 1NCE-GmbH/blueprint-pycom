@@ -2,7 +2,7 @@
 """"
     On boarding Configuration
 """
-ON_BOARDING_URL = "https://device.connectivity-suite.cloud/device-api/onboarding"
+ON_BOARDING_URL = 'https://device.connectivity-suite.cloud/device-api/onboarding'
 
 """"
     Iot Core Configuration
@@ -12,7 +12,7 @@ CONN_DISCONNECTION_TIMEOUT = 5
 # MQTT Operation timeout in seconds
 MQTT_OPERATION_TIMEOUT = 5
 #Topic Name
-TOPIC_NAME = "hello-world"
+MQTT_TOPIC_NAME = 'hello-world'
 
 """"
     File location configuration
@@ -27,8 +27,22 @@ ROOT_CA_PATH = '/flash/root-CA.crt'
 """"
     UDP Endpoint configuration
 """
-UDP_ENDPOINT_ADDRESS = "udp.connectivity-suite.cloud"
+UDP_ENDPOINT_ADDRESS = 'udp.connectivity-suite.cloud'
 UDP_ENDPOINT_PORT = 4445
+
+""""
+    CoAP Server Configuration
+"""
+COAP_SERVER_PORT = 5683
+COAP_POST_POLL_TIME = 2000
+
+""""
+    CoAP Endpoint Configuration
+"""
+COAP_ENDPOINT_ADDRESS = 'coap.connectivity-suite.cloud'
+COAP_ENDPOINT_PORT = 5683
+COAP_TOPIC_NAME = 'hello-world'
+COAP_ENDPOINT_PATH = '/'
 
 """"
     Translation Location
