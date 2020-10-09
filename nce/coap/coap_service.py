@@ -17,7 +17,7 @@ class CoapService:
         :param message_callback: Callback method
         """
         self.client.set_response_callback(message_callback)
-        self.logger("Starting the CoAP Client")
+        self.logger.info("Starting the CoAP Client")
         self.client.start()
 
     def set_message_callback_method(self, message_callback):
