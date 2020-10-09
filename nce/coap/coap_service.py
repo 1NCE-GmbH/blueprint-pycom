@@ -50,4 +50,4 @@ class CoapService:
 
         :param poll_period_ms: Poll period in milliseconds
         """
-        self.client.poll(poll_period_ms=poll_period_ms)
+        self.client.poll(poll_period_ms)
