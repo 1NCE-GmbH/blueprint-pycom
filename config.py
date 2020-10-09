@@ -47,8 +47,8 @@ COAP_ENDPOINT_PATH = '/'
 """"
     Translation Location
 """
-GPS_TRANSLATION_DATA_PATH = '/flash/lib/translator/gps_data.txt'
-ENV_DATA_COLLECTOR_TRANSLATION_DATA_PATH = '/flash/lib/translator/env_data_coll_data.txt'
+GPS_TRANSLATION_DATA_PATH = '/flash/nce/translator/gps_data.txt'
+ENV_DATA_COLLECTOR_TRANSLATION_DATA_PATH = '/flash/nce/translator/env_data_coll_data.txt'
 
 """"
     Message Interval
