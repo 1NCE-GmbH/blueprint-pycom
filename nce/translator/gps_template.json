@@ -36,7 +36,8 @@
                             "value": {
                                 "byte": 20,
                                 "bytelength": 8,
-                                "type": "float"
+                                "type": "float",
+                                "byteorder": "little"
                             }
                         },
                         {
@@ -44,7 +45,8 @@
                             "value": {
                                 "byte": 28,
                                 "bytelength": 8,
-                                "type": "float"
+                                "type": "float",
+                                "byteorder": "little"
                             }
                         },
                         {
@@ -52,7 +54,8 @@
                             "value": {
                                 "byte": 36,
                                 "bytelength": 2,
-                                "type": "int"
+                                "type": "int",
+                                "byteorder": "little"
                             }
                         },
                         {
@@ -60,7 +63,8 @@
                             "value": {
                                 "byte": 38,
                                 "bytelength": 4,
-                                "type": "float"
+                                "type": "float",
+                                "byteorder": "little"
                             }
                         },
                         {
@@ -68,7 +72,8 @@
                             "value": {
                                 "byte": 42,
                                 "bytelength": 4,
-                                "type": "float"
+                                "type": "float",
+                                "byteorder": "little"
                             }
                         },
                         {
@@ -76,7 +81,8 @@
                             "value": {
                                 "byte": 46,
                                 "bytelength": 4,
-                                "type": "float"
+                                "type": "float",
+                                "byteorder": "little"
                             }
                         },
                         {
@@ -84,7 +90,8 @@
                             "value": {
                                 "byte": 50,
                                 "bytelength": 2,
-                                "type": "int"
+                                "type": "int",
+                                "byteorder": "little"
                             }
                         },
                         {
@@ -92,7 +99,8 @@
                             "value": {
                                 "byte": 52,
                                 "bytelength": 2,
-                                "type": "int"
+                                "type": "uint",
+                                "byteorder": "little"
                             }
                         },
                         {
@@ -100,7 +108,8 @@
                             "value": {
                                 "byte": 54,
                                 "bytelength": 2,
-                                "type": "int"
+                                "type": "int",
+                                "byteorder": "little"
                             }
                         },
                         {

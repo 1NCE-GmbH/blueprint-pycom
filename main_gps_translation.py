@@ -25,7 +25,7 @@ def write_udp_gps_message(input_values):
         message_bytes = fill_bytes(message_bytes, 42, 46, input_values[6], ValueType.FLOAT)
         message_bytes = fill_bytes(message_bytes, 46, 50, input_values[7], ValueType.FLOAT)
         message_bytes = fill_bytes(message_bytes, 50, 52, input_values[8], ValueType.SHORT)
-        message_bytes = fill_bytes(message_bytes, 52, 54, input_values[9], ValueType.SHORT)
+        message_bytes = fill_bytes(message_bytes, 52, 54, input_values[9], ValueType.UINT)
         message_bytes = fill_bytes(message_bytes, 54, 56, input_values[10], ValueType.SHORT)
         message_bytes = fill_bytes(message_bytes, 56, 71, input_values[11], ValueType.STRING)
         message_bytes = fill_bytes(message_bytes, 71, 98, input_values[12], ValueType.STRING)

@@ -9,6 +9,7 @@
       "value": {
         "byte": 0,
         "bytelength": 4,
+        "byteorder": "little",
         "type": "float"
       }
     },
@@ -17,6 +18,7 @@
       "value": {
         "byte": 4,
         "bytelength": 4,
+        "byteorder": "little",
         "type": "float"
       }
     },
@@ -25,6 +27,7 @@
       "value": {
         "byte": 8,
         "bytelength": 4,
+        "byteorder": "little",
         "type": "float"
       }
     },
@@ -33,6 +36,7 @@
       "value": {
         "byte": 12,
         "bytelength": 4,
+        "byteorder": "little",
         "type": "float"
       }
     },
