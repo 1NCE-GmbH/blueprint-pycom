@@ -1,0 +1,8 @@
+{
+    "name": "PyCom Blueprint",
+    "stubs": {},
+    "dev-packages": {
+        "micropy-cli": "*"
+    },
+    "packages": {}
+}

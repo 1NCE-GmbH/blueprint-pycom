@@ -1,0 +1,22 @@
+{
+  "sense": [
+    {
+      "asset": "geo.long",
+      "value": {
+        "byte": 0,
+        "bytelength": 8,
+        "type": "float",
+        "byteorder": "little"
+      }
+    },
+    {
+      "asset": "geo.lat",
+      "value": {
+        "byte": 8,
+        "bytelength": 8,
+        "type": "float",
+        "byteorder": "little"
+      }
+    }
+  ]
+}

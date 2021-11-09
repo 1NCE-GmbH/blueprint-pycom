@@ -15,7 +15,7 @@ MQTT_OPERATION_TIMEOUT = 5
 MQTT_TOPIC_NAME = 'hello-world'
 
 """"
-    File location configuration
+    File location Configuration
 """
 # Private key file location on the PyCom device
 PRIVATE_KEY_PATH = '/flash/client.private.key'
@@ -25,7 +25,7 @@ CERTIFICATE_PATH = '/flash/client.cert.pem'
 ROOT_CA_PATH = '/flash/root-CA.crt'
 
 """"
-    UDP Endpoint configuration
+    UDP Endpoint Configuration
 """
 UDP_ENDPOINT_ADDRESS = 'udp.connectivity-suite.cloud'
 UDP_ENDPOINT_PORT = 4445
@@ -54,3 +54,8 @@ ENV_DATA_COLLECTOR_TRANSLATION_DATA_PATH = '/flash/nce/translator/env_data_coll_
     Message Interval
 """
 MESSAGE_INTERVAL_SECONDS = 60
+
+""""
+    GPS Tracking Configuration
+"""
+GPS_TRACKING_INTERVAL_SECONDS = 300
